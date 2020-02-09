@@ -1,0 +1,3 @@
+# wgan_jufo
+## WGAN-Framework for simulating cosmic rays using data from the Pierre-AUGER observatory.
+Projekt für Jugend-Forscht 2019/20, das nach Abgabe der schriftlichen Arbeit erstellt wird. Super, Max...
