@@ -3,11 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataGetter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataGetter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -18,7 +26,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1Xa4wurPy4tSoWYMDlCaGryUvgP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,6 +38,59 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Python.dataGetter">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="wgan_jufo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\maxim\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dataGetter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wgan_jufo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/dataGetter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.dataGetter" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.dataGetter" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -66,22 +129,57 @@
       <option name="project" value="LOCAL" />
       <updated>1581271336382</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Neue Unterteilung">
+      <created>1581271381627</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581271381627</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Erste py Files, aber halt alles leer">
+      <created>1581271527208</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581271527208</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Naja, einfach ein neuer Ordner, also no big deal..." />
     <MESSAGE value="Neue Unterteilung" />
-    <option name="LAST_COMMIT_MESSAGE" value="Neue Unterteilung" />
+    <MESSAGE value="Erste py Files, aber halt alles leer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Erste py Files, aber halt alles leer" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581271380786">
+    <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581272260331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581271380786" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581271510141">
+    <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272260331" />
+    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581271526259">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581271510141" />
+    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581271526259" />
+    <state width="949" height="285" key="GridCell.Tab.0.bottom" timestamp="1581272361876">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="949" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272361876" />
+    <state width="949" height="285" key="GridCell.Tab.0.center" timestamp="1581272361876">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="949" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272361876" />
+    <state width="949" height="285" key="GridCell.Tab.0.left" timestamp="1581272361875">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="949" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272361875" />
+    <state width="949" height="285" key="GridCell.Tab.0.right" timestamp="1581272361876">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="949" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272361876" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581271534350">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581271534350" />
   </component>
 </project>
