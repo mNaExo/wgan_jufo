@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataGetter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataGetter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exec/trainWGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/exec/trainWGAN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/wganF.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/wganF.py" afterDir="false" />
     </list>
@@ -179,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581348362455</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Besser als gar nichts, oder?">
+      <created>1581351835572</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581351835572</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,7 +195,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -200,17 +210,18 @@
     <MESSAGE value="Daten werden aus Excel-Datei als Array gezogen" />
     <MESSAGE value="Einfach ein kurzer Kommentar zur reCol() Methode..." />
     <MESSAGE value="Größte Änderung bis jetzt, Beispielimplementation übernommen, muss jetzt angepasst werden" />
-    <option name="LAST_COMMIT_MESSAGE" value="Größte Änderung bis jetzt, Beispielimplementation übernommen, muss jetzt angepasst werden" />
+    <MESSAGE value="Besser als gar nichts, oder?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Besser als gar nichts, oder?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581272260331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272260331" />
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581348358970">
+    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581351834291">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581348358970" />
+    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581351834291" />
     <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1581349286754">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -231,13 +242,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1471" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581288201726" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581348368052">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581351839631">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581348368052" />
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1581328311082">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581351839631" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1581353248769">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581328311082" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581353248769" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1581356287330">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581356287330" />
   </component>
 </project>

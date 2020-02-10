@@ -1,4 +1,5 @@
 import argparse
+import xlrd
 import os
 import numpy as np
 from keras.models import Model, Sequential
@@ -12,6 +13,7 @@ from keras.datasets import mnist
 from keras import backend as K
 from functools import partial
 
+import data.dataGetter
 BATCH_SIZE = 64
 TRAINING_RATIO = 5
 GRADIENT_PENALTY_WEIGHT = 10
@@ -39,8 +41,8 @@ def gradient_penalty_loss(y_true, y_pred, averaged_samples,
 
 
 def make_generator():
-    """Erzeugt ein Generatormodell, dass einen 6-dimensionalen Noisevektor als In nimmt und
-       ein ebenfalls 6-dimensionalen Vektor als Out liefert."""
+    """Erzeugt ein Generatormodell, dass einen 6-dimensionalen Noisetensor als In nimmt und
+       ein ebenfalls 6-dimensionalen tensor als Out liefert."""
     model = Sequential()
     model.add(Dense(180, input_dim=6))
     model.add(LeakyReLU())
@@ -64,7 +66,7 @@ def make_generator():
 
 
 def make_discriminator():
-    """Erzeugt ein Diskriminatormodell, dass ein 6-dimensionalen Vektor als In nimmt und einen Wert ausgibt,
+    """Erzeugt ein Diskriminatormodell, dass ein 6-dimensionalen tensor als In nimmt und einen Wert ausgibt,
        der angibt, ob die Eingabe generiert oder echt ist."""
     model = Sequential()
     model.add(Dense(240, input_dim=6))
@@ -87,20 +89,14 @@ class RandomWeightedAverage(_Merge):
         weights = K.random_uniform((BATCH_SIZE, 1, 1, 1))
         return (weights * inputs[0]) + ((1 - weights) * inputs[1])
 
-
-# TODO: Methode zur Initialisierung eines 6-dimensionalen Vektors mit beschränkten Zufallszahlen
-#  und verschiedenen Datentypen implementieren
 def generate_images(generator_model, output_dir, epoch):
     """Feeds random seeds into the generator and tiles and saves the output to a PNG
     file."""
-    test_image_stack = generator_model.predict(np.random.rand(10, 100))
-    test_image_stack = (test_image_stack * 127.5) + 127.5
-    test_image_stack = np.squeeze(np.round(test_image_stack).astype(np.uint8))
-    tiled_output = tile_images(test_image_stack)
-    tiled_output = Image.fromarray(tiled_output, mode='L')  # L specifies greyscale
-    outfile = os.path.join(output_dir, 'epoch_{}.png'.format(epoch))
+    test_tensor = generator_model.predict(np.random.rand(10, 100))
+    test_tensor = np.squeeze(np.round(test_tensor).astype(np.uint8))
+    tiled_output = test_tensor(test_tensor)
+    outfile = os.path.join(output_dir, 'epoch_{}.txt'.format(epoch))
     tiled_output.save(outfile)
-
 
 parser = argparse.ArgumentParser(description="Improved Wasserstein GAN "
                                              "implementation for Keras.")
@@ -109,13 +105,11 @@ parser.add_argument("--output_dir", "-o", required=True,
 args = parser.parse_args()
 
 # First we load the image data, reshape it and normalize it to the range [-1, 1]
-(X_train, y_train), (X_test, y_test) = mnist.load_data()
-X_train = np.concatenate((X_train, X_test), axis=0)
-if K.image_data_format() == 'channels_first':
-    X_train = X_train.reshape((X_train.shape[0], 1, X_train.shape[1], X_train.shape[2]))
-else:
-    X_train = X_train.reshape((X_train.shape[0], X_train.shape[1], X_train.shape[2], 1))
-X_train = (X_train.astype(np.float32) - 127.5) / 127.5
+alleEvents = []
+for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
+    alleEvents.append(data.dataGetter.reCol(i))
+
+
 
 # Now we initialize the generator and discriminator.
 generator = make_generator()
