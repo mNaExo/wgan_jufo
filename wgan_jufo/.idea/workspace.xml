@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataGetter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataGetter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/trainWGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/exec/trainWGAN.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/wganF.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/wganF.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581272511258</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Einfach ein kurzer Kommentar zur reCol() Methode...">
+      <created>1581333482384</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581333482384</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -172,17 +180,18 @@
     <MESSAGE value="Neue Unterteilung" />
     <MESSAGE value="Erste py Files, aber halt alles leer" />
     <MESSAGE value="Daten werden aus Excel-Datei als Array gezogen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Daten werden aus Excel-Datei als Array gezogen" />
+    <MESSAGE value="Einfach ein kurzer Kommentar zur reCol() Methode..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Einfach ein kurzer Kommentar zur reCol() Methode..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581272260331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272260331" />
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581272510275">
+    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581333480987">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272510275" />
+    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581333480987" />
     <state width="1471" height="285" key="GridCell.Tab.0.bottom" timestamp="1581288201727">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -199,10 +208,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1471" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581288201726" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581272519231">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581333489706">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272519231" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581333489706" />
     <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1581328311082">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
