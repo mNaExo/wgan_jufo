@@ -4,7 +4,6 @@
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dataGetter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataGetter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/trainWGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/exec/trainWGAN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/wganF.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/wganF.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581351835572</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Wir nähern uns dem Ziel...&#10;Daten werden ins Framework gezogen, müssen noch normalisiert und später verarbeitet werden :)">
+      <created>1581356646072</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1581356646072</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,41 +217,42 @@
     <MESSAGE value="Einfach ein kurzer Kommentar zur reCol() Methode..." />
     <MESSAGE value="Größte Änderung bis jetzt, Beispielimplementation übernommen, muss jetzt angepasst werden" />
     <MESSAGE value="Besser als gar nichts, oder?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Besser als gar nichts, oder?" />
+    <MESSAGE value="Wir nähern uns dem Ziel...&#10;Daten werden ins Framework gezogen, müssen noch normalisiert und später verarbeitet werden :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wir nähern uns dem Ziel...&#10;Daten werden ins Framework gezogen, müssen noch normalisiert und später verarbeitet werden :)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581272260331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272260331" />
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581351834291">
+    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581356643406">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581351834291" />
+    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581356643406" />
     <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1581349286754">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="282" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581349286754" />
-    <state width="1471" height="285" key="GridCell.Tab.0.bottom" timestamp="1581288201727">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1581358185525">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1471" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581288201727" />
-    <state width="1471" height="285" key="GridCell.Tab.0.center" timestamp="1581288201726">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
+    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1581358185525">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1471" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581288201726" />
-    <state width="1471" height="285" key="GridCell.Tab.0.left" timestamp="1581288201726">
+    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
+    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1581358185525">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1471" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581288201726" />
-    <state width="1471" height="285" key="GridCell.Tab.0.right" timestamp="1581288201726">
+    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1581358185525">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1471" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581288201726" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581351839631">
+    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581356646370">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581351839631" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581356646370" />
     <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1581353248769">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

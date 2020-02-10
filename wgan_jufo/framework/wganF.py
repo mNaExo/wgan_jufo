@@ -56,7 +56,7 @@ def make_generator():
     model.add(BatchNormalization())
     model.add(LeakyReLU())
     model.add(Dense(15))
-    model.add(BatchNormalization(axis=bn_axis))
+    model.add(BatchNormalization())
     model.add(LeakyReLU())
     # Because we normalized training inputs to lie in the range [-1, 1],
     # the tanh function should be used for the output of the generator to ensure
@@ -108,6 +108,9 @@ args = parser.parse_args()
 alleEvents = []
 for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
     alleEvents.append(data.dataGetter.reCol(i))
+
+for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
+    alleEvents[i] = tf.Transform(BatchNormalization)
 
 
 
