@@ -27,3 +27,11 @@
     Keras only supports passing y_true and y_pred to loss functions. To get around this,
     we make a partial() of the function with the averaged_samples argument, and use that
     for model training."""
+
+# first get the gradients:
+    #   assuming: - that y_pred has dimensions (batch_size, 1)
+    #             - averaged_samples has dimensions (batch_size, nbr_features)
+    # gradients afterwards has dimension (batch_size, nbr_features), basically
+    # a list of nbr_features-dimensional gradient vectors
+
+# compute the euclidean norm by squaring ...

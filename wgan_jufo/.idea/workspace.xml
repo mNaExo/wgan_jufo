@@ -172,8 +172,26 @@
       <option name="project" value="LOCAL" />
       <updated>1581333482384</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Größte Änderung bis jetzt, Beispielimplementation übernommen, muss jetzt angepasst werden">
+      <created>1581348362455</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581348362455</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Naja, einfach ein neuer Ordner, also no big deal..." />
@@ -181,17 +199,22 @@
     <MESSAGE value="Erste py Files, aber halt alles leer" />
     <MESSAGE value="Daten werden aus Excel-Datei als Array gezogen" />
     <MESSAGE value="Einfach ein kurzer Kommentar zur reCol() Methode..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Einfach ein kurzer Kommentar zur reCol() Methode..." />
+    <MESSAGE value="Größte Änderung bis jetzt, Beispielimplementation übernommen, muss jetzt angepasst werden" />
+    <option name="LAST_COMMIT_MESSAGE" value="Größte Änderung bis jetzt, Beispielimplementation übernommen, muss jetzt angepasst werden" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581272260331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272260331" />
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581333480987">
+    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581348358970">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581333480987" />
+    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581348358970" />
+    <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1581349286754">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="282" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581349286754" />
     <state width="1471" height="285" key="GridCell.Tab.0.bottom" timestamp="1581288201727">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -208,10 +231,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1471" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581288201726" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581333489706">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581348368052">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581333489706" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581348368052" />
     <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1581328311082">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

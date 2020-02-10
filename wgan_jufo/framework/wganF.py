@@ -29,102 +29,67 @@ def wasserstein_loss(y_true, y_pred):
 def gradient_penalty_loss(y_true, y_pred, averaged_samples,
                           gradient_penalty_weight):
     """ Berechnet den gpl für ein normalisiertes Batch. """
-    # first get the gradients:
-    #   assuming: - that y_pred has dimensions (batch_size, 1)
-    #             - averaged_samples has dimensions (batch_size, nbr_features)
-    # gradients afterwards has dimension (batch_size, nbr_features), basically
-    # a list of nbr_features-dimensional gradient vectors
     gradients = K.gradients(y_pred, averaged_samples)[0]
-    # compute the euclidean norm by squaring ...
     gradients_sqr = K.square(gradients)
-    #   ... summing over the rows ...
     gradients_sqr_sum = K.sum(gradients_sqr,
                               axis=np.arange(1, len(gradients_sqr.shape)))
-    #   ... and sqrt
     gradient_l2_norm = K.sqrt(gradients_sqr_sum)
-    # compute lambda * (1 - ||grad||)^2 still for each single sample
     gradient_penalty = gradient_penalty_weight * K.square(1 - gradient_l2_norm)
-    # return the mean as loss over all the batch samples
     return K.mean(gradient_penalty)
 
 
 def make_generator():
-    """Creates a generator model that takes a 100-dimensional noise vector as a "seed",
-    and outputs images of size 28x28x1. """
-    model.add(Dense(1024, input_dim=100))
+    """Erzeugt ein Generatormodell, dass einen 6-dimensionalen Noisevektor als In nimmt und
+       ein ebenfalls 6-dimensionalen Vektor als Out liefert."""
+    model = Sequential()
+    model.add(Dense(180, input_dim=6))
     model.add(LeakyReLU())
-    model.add(Dense(128 * 7 * 7))
+    model.add(Dense(45))
     model.add(BatchNormalization())
     model.add(LeakyReLU())
-    if K.image_data_format() == 'channels_first':
-        model.add(Reshape((128, 7, 7), input_shape=(128 * 7 * 7,)))
-        bn_axis = 1
-    else:
-        model.add(Reshape((7, 7, 128), input_shape=(128 * 7 * 7,)))
-        bn_axis = -1
-    model.add(Conv2DTranspose(128, (5, 5), strides=2, padding='same'))
-    model.add(BatchNormalization(axis=bn_axis))
+    model.add(Dense(29))
+    model.add(BatchNormalization())
     model.add(LeakyReLU())
-    model.add(Convolution2D(64, (5, 5), padding='same'))
-    model.add(BatchNormalization(axis=bn_axis))
+    model.add(Dense(20))
+    model.add(BatchNormalization())
     model.add(LeakyReLU())
-    model.add(Conv2DTranspose(64, (5, 5), strides=2, padding='same'))
+    model.add(Dense(15))
     model.add(BatchNormalization(axis=bn_axis))
     model.add(LeakyReLU())
     # Because we normalized training inputs to lie in the range [-1, 1],
     # the tanh function should be used for the output of the generator to ensure
     # its output also lies in this range.
-    model.add(Convolution2D(1, (5, 5), padding='same', activation='tanh'))
+    model.add(Dense(6, activation='tanh'))
     return model
 
 
 def make_discriminator():
-    """Creates a discriminator model that takes an image as input and outputs a single
-    value, representing whether the input is real or generated. Unlike normal GANs, the
-    output is not sigmoid and does not represent a probability! Instead, the output
-    should be as large and negative as possible for generated inputs and as large and
-    positive as possible for real inputs.
-    Note that the improved WGAN paper suggests that BatchNormalization should not be
-    used in the discriminator."""
+    """Erzeugt ein Diskriminatormodell, dass ein 6-dimensionalen Vektor als In nimmt und einen Wert ausgibt,
+       der angibt, ob die Eingabe generiert oder echt ist."""
     model = Sequential()
-    if K.image_data_format() == 'channels_first':
-        model.add(Convolution2D(64, (5, 5), padding='same', input_shape=(1, 28, 28)))
-    else:
-        model.add(Convolution2D(64, (5, 5), padding='same', input_shape=(28, 28, 1)))
+    model.add(Dense(240, input_dim=6))
     model.add(LeakyReLU())
-    model.add(Convolution2D(128, (5, 5), kernel_initializer='he_normal',
-                            strides=[2, 2]))
+    model.add(Dense(120))
     model.add(LeakyReLU())
-    model.add(Convolution2D(128, (5, 5), kernel_initializer='he_normal', padding='same',
-                            strides=[2, 2]))
+    model.add(Dense(60))
     model.add(LeakyReLU())
     model.add(Flatten())
-    model.add(Dense(1024, kernel_initializer='he_normal'))
+    model.add(Dense(30))
     model.add(LeakyReLU())
     model.add(Dense(1, kernel_initializer='he_normal'))
     return model
 
 
-def tile_images(image_stack):
-    """Given a stacked tensor of images, reshapes them into a horizontal tiling for
-    display."""
-    assert len(image_stack.shape) == 3
-    image_list = [image_stack[i, :, :] for i in range(image_stack.shape[0])]
-    tiled_images = np.concatenate(image_list, axis=1)
-    return tiled_images
-
-
 class RandomWeightedAverage(_Merge):
-    """Takes a randomly-weighted average of two tensors. In geometric terms, this
-    outputs a random point on the line between each pair of input points.
-    Inheriting from _Merge is a little messy but it was the quickest solution I could
-    think of. Improvements appreciated."""
+    """Zufällige Zuweisung von Synapsengewichten"""
 
     def _merge_function(self, inputs):
         weights = K.random_uniform((BATCH_SIZE, 1, 1, 1))
         return (weights * inputs[0]) + ((1 - weights) * inputs[1])
 
 
+# TODO: Methode zur Initialisierung eines 6-dimensionalen Vektors mit beschränkten Zufallszahlen
+#  und verschiedenen Datentypen implementieren
 def generate_images(generator_model, output_dir, epoch):
     """Feeds random seeds into the generator and tiles and saves the output to a PNG
     file."""
