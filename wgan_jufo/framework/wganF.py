@@ -104,17 +104,17 @@ parser.add_argument("--output_dir", "-o", required=True,
                     help="Directory to output generated files to")
 args = parser.parse_args()
 
-# First we load the image data, reshape it and normalize it to the range [-1, 1]
+# Daten in leere Liste laden, normalisieren... 
 alleEvents = []
 for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
     alleEvents.append(data.dataGetter.reCol(i))
 
 for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
-    alleEvents[i] = tf.Transform(BatchNormalization)
+    alleEvents[i] = alleEvents[i].tf.Transform(BatchNormalization)
 
 
 
-# Now we initialize the generator and discriminator.
+# Initialisierung von Generator und Diskriminator
 generator = make_generator()
 discriminator = make_discriminator()
 
