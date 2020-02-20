@@ -205,3 +205,5 @@ for epoch in range(100):
     # Still needs some code to display losses from the generator and discriminator,
     # progress bars, etc.
     generate_images(generator, args.output_dir, epoch)
+
+    # TODO: AUSGABE!!!!! Visualisierung der Daten!

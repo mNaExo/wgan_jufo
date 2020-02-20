@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/trainWGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/exec/trainWGAN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/wganF.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/wganF.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581781043770</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Doc geändert...">
+      <created>1582186264633</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582186264633</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,16 +240,18 @@
     <MESSAGE value="Wir nähern uns dem Ziel...&#10;Daten werden ins Framework gezogen, müssen noch normalisiert und später verarbeitet werden :)" />
     <MESSAGE value="Naja, irgendwas im dataGetter.py verändert, aber hat nicht ganz gefunzt. Letzte Änderungen für heute :(" />
     <MESSAGE value="Naja, eigentlich nur zwei Changes und auch nur minor..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Naja, eigentlich nur zwei Changes und auch nur minor..." />
+    <MESSAGE value="Doc geändert..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Doc geändert..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581272260331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272260331" />
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581781042978">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="515" y="30" key="CommitChangelistDialog2" timestamp="1582186584259">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="515" y="30" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1582186584259" />
     <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581781042978" />
     <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1581349286754">
       <screen x="0" y="0" width="1920" height="1050" />
