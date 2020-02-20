@@ -118,11 +118,6 @@ for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
 generator = make_generator()
 discriminator = make_discriminator()
 
-# The generator_model is used when we want to train the generator layers.
-# As such, we ensure that the discriminator layers are not trainable.
-# Note that once we compile this model, updating .trainable will have no effect within
-# it. As such, it won't cause problems if we later set discriminator.trainable = True
-# for the discriminator_model, as long as we compile the generator_model first.
 for layer in discriminator.layers:
     layer.trainable = False
 discriminator.trainable = False
@@ -131,12 +126,11 @@ generator_layers = generator(generator_input)
 discriminator_layers_for_generator = discriminator(generator_layers)
 generator_model = Model(inputs=[generator_input],
                         outputs=[discriminator_layers_for_generator])
-# We use the Adam paramaters from Gulrajani et al.
+# Adam als Optimizer!
 generator_model.compile(optimizer=Adam(0.0001, beta_1=0.5, beta_2=0.9),
                         loss=wasserstein_loss)
 
-# Now that the generator_model is compiled, we can make the discriminator
-# layers trainable.
+# Nach der vollständigen Initialisierung der beiden NNs können sie jetzt trainiert werden
 for layer in discriminator.layers:
     layer.trainable = True
 for layer in generator.layers:
@@ -144,45 +138,31 @@ for layer in generator.layers:
 discriminator.trainable = True
 generator.trainable = False
 
-# The discriminator_model is more complex. It takes both real image samples and random
-# noise seeds as input. The noise seed is run through the generator model to get
-# generated images. Both real and generated images are then run through the
-# discriminator. Although we could concatenate the real and generated images into a
-# single tensor, we don't (see model compilation for why).
+# Diskriminator kriegt sowohl echte Ereignisse, als auch Noise vom Gen.
 real_samples = Input(shape=X_train.shape[1:])
 generator_input_for_discriminator = Input(shape=(100,))
 generated_samples_for_discriminator = generator(generator_input_for_discriminator)
 discriminator_output_from_generator = discriminator(generated_samples_for_discriminator)
 discriminator_output_from_real_samples = discriminator(real_samples)
 
-# We also need to generate weighted-averages of real and generated samples,
-# to use for the gradient norm penalty.
+# Gewichtung muss angepasst werden --> samples werden zusammengefasst
 averaged_samples = RandomWeightedAverage()([real_samples,
                                             generated_samples_for_discriminator])
-# We then run these samples through the discriminator as well. Note that we never
-# really use the discriminator output for these samples - we're only running them to
-# get the gradient norm for the gradient penalty loss.
+ # aS werden überschrieben --> durch das NN
 averaged_samples_out = discriminator(averaged_samples)
 
-# The gradient penalty loss function requires the input averaged samples to get
-# gradients. However, Keras loss functions can only have two arguments, y_true and
-# y_pred. We get around this by making a partial() of the function with the averaged
-# samples here.
+# Grdients müssen für die Loss-Funktion noch definiert werden
 partial_gp_loss = partial(gradient_penalty_loss,
                           averaged_samples=averaged_samples,
                           gradient_penalty_weight=GRADIENT_PENALTY_WEIGHT)
-# Functions need names or Keras will throw an error
+
+# Keras ist ziemlich picky und will für alle Funktion
 partial_gp_loss.__name__ = 'gradient_penalty'
 
-# Keras requires that inputs and outputs have the same number of samples. This is why
-# we didn't concatenate the real samples and generated samples before passing them to
-# the discriminator: If we had, it would create an output with 2 * BATCH_SIZE samples,
-# while the output of the "averaged" samples for gradient penalty
-# would have only BATCH_SIZE samples.
+# Keras ist so picky, dass es erfordert, dass die gleiche Anzahl von in und out samples
+# durch das System laufen
 
-# If we don't concatenate the real and generated samples, however, we get three
-# outputs: One of the generated samples, one of the real samples, and one of the
-# averaged samples, all of size BATCH_SIZE. This works neatly!
+# Drei Outs, ein echtes, ein generiertes und ein zusammengefasstes Sample
 discriminator_model = Model(inputs=[real_samples,
                                     generator_input_for_discriminator],
                             outputs=[discriminator_output_from_real_samples,

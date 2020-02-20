@@ -43,3 +43,39 @@ if K.image_data_format() == 'channels_first':
 else:
     X_train = X_train.reshape((X_train.shape[0], X_train.shape[1], X_train.shape[2], 1))
 X_train = (X_train.astype(np.float32) - 127.5) / 127.5
+
+# The generator_model is used when we want to train the generator layers.
+# As such, we ensure that the discriminator layers are not trainable.
+# Note that once we compile this model, updating .trainable will have no effect within
+# it. As such, it won't cause problems if we later set discriminator.trainable = True
+# for the discriminator_model, as long as we compile the generator_model first.
+
+# We use the Adam paramaters from Gulrajani et al.
+
+# The discriminator_model is more complex. It takes both real image samples and random
+# noise seeds as input. The noise seed is run through the generator model to get
+# generated images. Both real and generated images are then run through the
+# discriminator. Although we could concatenate the real and generated images into a
+# single tensor, we don't (see model compilation for why).
+
+# We also need to generate weighted-averages of real and generated samples,
+# to use for the gradient norm penalty.
+
+# We then run these samples through the discriminator as well. Note that we never
+# really use the discriminator output for these samples - we're only running them to
+# get the gradient norm for the gradient penalty loss.
+
+# The gradient penalty loss function requires the input averaged samples to get
+# gradients. However, Keras loss functions can only have two arguments, y_true and
+# y_pred. We get around this by making a partial() of the function with the averaged
+# samples here.
+
+# Keras requires that inputs and outputs have the same number of samples. This is why
+# we didn't concatenate the real samples and generated samples before passing them to
+# the discriminator: If we had, it would create an output with 2 * BATCH_SIZE samples,
+# while the output of the "averaged" samples for gradient penalty
+# would have only BATCH_SIZE samples.
+
+# If we don't concatenate the real and generated samples, however, we get three
+# outputs: One of the generated samples, one of the real samples, and one of the
+# averaged samples, all of size BATCH_SIZE. This works neatly!

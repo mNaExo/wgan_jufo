@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataGetter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataGetter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/trainWGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/exec/trainWGAN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/wganF.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/wganF.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +193,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581356646072</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Naja, irgendwas im dataGetter.py verändert, aber hat nicht ganz gefunzt. Letzte Änderungen für heute :(">
+      <created>1581358224572</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581358224572</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Naja, eigentlich nur zwei Changes und auch nur minor...">
+      <created>1581781043770</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1581781043770</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,17 +232,19 @@
     <MESSAGE value="Größte Änderung bis jetzt, Beispielimplementation übernommen, muss jetzt angepasst werden" />
     <MESSAGE value="Besser als gar nichts, oder?" />
     <MESSAGE value="Wir nähern uns dem Ziel...&#10;Daten werden ins Framework gezogen, müssen noch normalisiert und später verarbeitet werden :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wir nähern uns dem Ziel...&#10;Daten werden ins Framework gezogen, müssen noch normalisiert und später verarbeitet werden :)" />
+    <MESSAGE value="Naja, irgendwas im dataGetter.py verändert, aber hat nicht ganz gefunzt. Letzte Änderungen für heute :(" />
+    <MESSAGE value="Naja, eigentlich nur zwei Changes und auch nur minor..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Naja, eigentlich nur zwei Changes und auch nur minor..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581272260331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272260331" />
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581356643406">
+    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1581781042978">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581356643406" />
+    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581781042978" />
     <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1581349286754">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -249,14 +265,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581356646370">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581781046165">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581356646370" />
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1581353248769">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581781046165" />
+    <state x="540" y="279" key="com.intellij.ide.util.TipDialog" timestamp="1582183181504">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581353248769" />
+    <state x="540" y="279" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582183181504" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581775200016" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1581356287330">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
