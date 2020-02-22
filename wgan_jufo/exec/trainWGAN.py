@@ -79,3 +79,11 @@ X_train = (X_train.astype(np.float32) - 127.5) / 127.5
 # If we don't concatenate the real and generated samples, however, we get three
 # outputs: One of the generated samples, one of the real samples, and one of the
 # averaged samples, all of size BATCH_SIZE. This works neatly!
+
+# We use the Adam paramaters from Gulrajani et al. We use the Wasserstein loss for both
+# the real and generated samples, and the gradient penalty loss for the averaged samples
+
+# We make three label vectors for training. positive_y is the label vector for real
+# samples, with value 1. negative_y is the label vector for generated samples, with
+# value -1. The dummy_y vector is passed to the gradient_penalty loss function and
+# is not used.

@@ -30,7 +30,7 @@ def wasserstein_loss(y_true, y_pred):
 
 def gradient_penalty_loss(y_true, y_pred, averaged_samples,
                           gradient_penalty_weight):
-    """ Berechnet den gpl für ein normalisiertes Batch. """
+    """ Berechnet das gpl für ein normalisiertes Batch. """
     gradients = K.gradients(y_pred, averaged_samples)[0]
     gradients_sqr = K.square(gradients)
     gradients_sqr_sum = K.sum(gradients_sqr,
@@ -58,9 +58,10 @@ def make_generator():
     model.add(Dense(15))
     model.add(BatchNormalization())
     model.add(LeakyReLU())
-    # Because we normalized training inputs to lie in the range [-1, 1],
-    # the tanh function should be used for the output of the generator to ensure
-    # its output also lies in this range.
+    
+    # Da die Inputdaten in das Intervall [-1, 1] gepresst wurden, liegt nah, 
+    # die Tangens-Hyperbolicus Funktion für die Outputdaten des Generators zu nutzen, 
+    # damit die jeweiligen Intervalle identisch sind
     model.add(Dense(6, activation='tanh'))
     return model
 
@@ -89,14 +90,19 @@ class RandomWeightedAverage(_Merge):
         weights = K.random_uniform((BATCH_SIZE, 1, 1, 1))
         return (weights * inputs[0]) + ((1 - weights) * inputs[1])
 
-def generate_images(generator_model, output_dir, epoch):
-    """Feeds random seeds into the generator and tiles and saves the output to a PNG
-    file."""
-    test_tensor = generator_model.predict(np.random.rand(10, 100))
-    test_tensor = np.squeeze(np.round(test_tensor).astype(np.uint8))
-    tiled_output = test_tensor(test_tensor)
-    outfile = os.path.join(output_dir, 'epoch_{}.txt'.format(epoch))
-    tiled_output.save(outfile)
+def generate_events(generator_model, output_dir, epoch):
+    """Zufallsrauschen in Form eines 6-dimensionalen Vektors wird übergeben"""
+    test_event_tensor = generator_model.predict(np.random.rand(10, 100))
+    test_event_tensor = np.squeeze(np.round(test_event_tensor).astype(np.uint8))
+    # tiled_event_output =
+
+    # TODO: Methode für Ausgabengenerierung muss fertig werden!!!!!
+
+    # test_tensor = generator_model.predict(np.random.rand(10, 100))
+    # test_tensor = np.squeeze(np.round(test_tensor).astype(np.uint8))
+    # tiled_output = test_tensor(test_tensor)
+    # outfile = os.path.join(output_dir, 'epoch_{}.txt'.format(epoch))
+    # tiled_output.save(outfile)
 
 parser = argparse.ArgumentParser(description="Improved Wasserstein GAN "
                                              "implementation for Keras.")
@@ -168,20 +174,19 @@ discriminator_model = Model(inputs=[real_samples,
                             outputs=[discriminator_output_from_real_samples,
                                      discriminator_output_from_generator,
                                      averaged_samples_out])
-# We use the Adam paramaters from Gulrajani et al. We use the Wasserstein loss for both
-# the real and generated samples, and the gradient penalty loss for the averaged samples
+
+# Adam für alles, Wasserstein für echt und generiert und gp loss für die averaged samples
 discriminator_model.compile(optimizer=Adam(0.0001, beta_1=0.5, beta_2=0.9),
                             loss=[wasserstein_loss,
                                   wasserstein_loss,
                                   partial_gp_loss])
-# We make three label vectors for training. positive_y is the label vector for real
-# samples, with value 1. negative_y is the label vector for generated samples, with
-# value -1. The dummy_y vector is passed to the gradient_penalty loss function and
-# is not used.
+
+# label Vektoren werden erstellt, dummy_y wird zum gp loss übergeben und nicht benutzt
 positive_y = np.ones((BATCH_SIZE, 1), dtype=np.float32)
 negative_y = -positive_y
 dummy_y = np.zeros((BATCH_SIZE, 1), dtype=np.float32)
 
+# Trainingsfunktion
 for epoch in range(100):
     np.random.shuffle(X_train)
     print("Epoch: ", epoch)
@@ -202,8 +207,7 @@ for epoch in range(100):
         generator_loss.append(generator_model.train_on_batch(np.random.rand(BATCH_SIZE,
                                                                             100),
                                                              positive_y))
-    # Still needs some code to display losses from the generator and discriminator,
-    # progress bars, etc.
-    generate_images(generator, args.output_dir, epoch)
 
     # TODO: AUSGABE!!!!! Visualisierung der Daten!
+    generate_events(generator, args.output_dir, epoch)
+

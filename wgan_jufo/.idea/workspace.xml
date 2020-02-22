@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataGetter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataGetter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exec/trainWGAN.py" beforeDir="false" afterPath="$PROJECT_DIR$/exec/trainWGAN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/wganF.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/wganF.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.dataGetter">
+  <component name="RunManager" selected="Python.wganF">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="wgan_jufo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,12 +84,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="wganF" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="wgan_jufo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/framework" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/framework/wganF.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.dataGetter" />
+      <item itemvalue="Python.wganF" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.wganF" />
         <item itemvalue="Python.dataGetter" />
       </list>
     </recent_temporary>
@@ -213,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582186264633</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="TODO und so">
+      <created>1582186605942</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1582186605942</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,50 +273,76 @@
     <MESSAGE value="Naja, irgendwas im dataGetter.py verändert, aber hat nicht ganz gefunzt. Letzte Änderungen für heute :(" />
     <MESSAGE value="Naja, eigentlich nur zwei Changes und auch nur minor..." />
     <MESSAGE value="Doc geändert..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Doc geändert..." />
+    <MESSAGE value="TODO und so" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO und so" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="185" key="#Inspections" timestamp="1582400638251">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="185" key="#Inspections/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582400638251" />
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581272260331">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581272260331" />
-    <state x="515" y="30" key="CommitChangelistDialog2" timestamp="1582186584259">
+    <state x="640" y="258" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582328916484">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="640" y="258" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582328916484" />
+    <state x="515" y="30" key="CommitChangelistDialog2" timestamp="1582186604278">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="515" y="30" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1582186584259" />
+    <state x="515" y="30" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1582186604278" />
     <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581781042978" />
     <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1581349286754">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="282" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581349286754" />
-    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1581358185525">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1582399684740">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
-    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1581358185525">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582399684740" />
+    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1582399684739">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
-    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1581358185525">
+    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582399684739" />
+    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1582399684739">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
-    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1581358185525">
+    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582399684739" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1582399684739">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581358185525" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1581781046165">
+    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582399684739" />
+    <state width="1899" height="351" key="GridCell.Tab.1.bottom" timestamp="1582399325604">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581781046165" />
-    <state x="540" y="279" key="com.intellij.ide.util.TipDialog" timestamp="1582183181504">
+    <state width="1899" height="351" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582399325604" />
+    <state width="1899" height="351" key="GridCell.Tab.1.center" timestamp="1582399325604">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="351" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582399325604" />
+    <state width="1899" height="351" key="GridCell.Tab.1.left" timestamp="1582399325604">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="351" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582399325604" />
+    <state width="1899" height="351" key="GridCell.Tab.1.right" timestamp="1582399325604">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="351" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582399325604" />
+    <state x="442" y="207" key="Vcs.Push.Dialog.v2" timestamp="1582186614913">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="540" y="279" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582183181504" />
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581775200016" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1581356287330">
+    <state x="442" y="207" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1582186614913" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581781046165" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1582397193596">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1581356287330" />
+    <state x="540" y="279" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582183181504" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582397193596" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1582400661824">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582400661824" />
   </component>
 </project>
