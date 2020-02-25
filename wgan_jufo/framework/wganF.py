@@ -14,6 +14,7 @@ from keras import backend as K
 from functools import partial
 
 import data.dataGetter
+
 BATCH_SIZE = 64
 TRAINING_RATIO = 5
 GRADIENT_PENALTY_WEIGHT = 10
@@ -58,7 +59,7 @@ def make_generator():
     model.add(Dense(15))
     model.add(BatchNormalization())
     model.add(LeakyReLU())
-    
+
     # Da die Inputdaten in das Intervall [-1, 1] gepresst wurden, liegt nah, 
     # die Tangens-Hyperbolicus Funktion für die Outputdaten des Generators zu nutzen, 
     # damit die jeweiligen Intervalle identisch sind
@@ -90,6 +91,7 @@ class RandomWeightedAverage(_Merge):
         weights = K.random_uniform((BATCH_SIZE, 1, 1, 1))
         return (weights * inputs[0]) + ((1 - weights) * inputs[1])
 
+
 def generate_events(generator_model, output_dir, epoch):
     """Zufallsrauschen in Form eines 6-dimensionalen Vektors wird übergeben"""
     test_event_tensor = generator_model.predict(np.random.rand(10, 100))
@@ -104,6 +106,7 @@ def generate_events(generator_model, output_dir, epoch):
     # outfile = os.path.join(output_dir, 'epoch_{}.txt'.format(epoch))
     # tiled_output.save(outfile)
 
+
 parser = argparse.ArgumentParser(description="Improved Wasserstein GAN "
                                              "implementation for Keras.")
 parser.add_argument("--output_dir", "-o", required=True,
@@ -117,8 +120,6 @@ for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
 
 for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
     alleEvents[i] = alleEvents[i].tf.Transform(BatchNormalization)
-
-
 
 # Initialisierung von Generator und Diskriminator
 generator = make_generator()
@@ -154,7 +155,7 @@ discriminator_output_from_real_samples = discriminator(real_samples)
 # Gewichtung muss angepasst werden --> samples werden zusammengefasst
 averaged_samples = RandomWeightedAverage()([real_samples,
                                             generated_samples_for_discriminator])
- # aS werden überschrieben --> durch das NN
+# aS werden überschrieben --> durch das NN
 averaged_samples_out = discriminator(averaged_samples)
 
 # Grdients müssen für die Loss-Funktion noch definiert werden
@@ -211,3 +212,32 @@ for epoch in range(100):
     # TODO: AUSGABE!!!!! Visualisierung der Daten!
     generate_events(generator, args.output_dir, epoch)
 
+
+# Zusammenführung der NNs
+def re_wgan():
+    model = Sequential()
+    model.add(generator_model)
+    model.add(discriminator_model)
+    return model
+
+
+# Framework kompilieren
+re_wgan.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+# Framework als JSON darstellen
+model_json = re_wgan().to_json()
+with open("model.json", "w") as json_file:
+    json_file.write(model_json)
+# serialize weights to HDF5
+re_wgan.save_weights("model.h5")
+print("Saved model to disk")
+
+'''
+    json_file = open('model.json', 'r')
+    loaded_model_json = json_file.read()
+    json_file.close()
+    loaded_model = model_from_json(loaded_model_json)
+    # load weights into new model
+    loaded_model.load_weights("model.h5")
+    print("Loaded model from disk")
+'''
