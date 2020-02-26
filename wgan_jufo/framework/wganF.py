@@ -113,7 +113,7 @@ parser.add_argument("--output_dir", "-o", required=True,
                     help="Directory to output generated files to")
 args = parser.parse_args()
 
-# Daten in leere Liste laden, normalisieren... 
+# Daten in leere Liste laden
 alleEvents = []
 for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
     alleEvents.append(data.dataGetter.reCol(i))
@@ -146,7 +146,7 @@ discriminator.trainable = True
 generator.trainable = False
 
 # Diskriminator kriegt sowohl echte Ereignisse, als auch Noise vom Gen.
-real_samples = Input(shape=X_train.shape[1:])
+real_samples = Input(shape=alleEvents.shape[1:])
 generator_input_for_discriminator = Input(shape=(100,))
 generated_samples_for_discriminator = generator(generator_input_for_discriminator)
 discriminator_output_from_generator = discriminator(generated_samples_for_discriminator)
@@ -163,12 +163,11 @@ partial_gp_loss = partial(gradient_penalty_loss,
                           averaged_samples=averaged_samples,
                           gradient_penalty_weight=GRADIENT_PENALTY_WEIGHT)
 
-# Keras ist ziemlich picky und will für alle Funktion
 partial_gp_loss.__name__ = 'gradient_penalty'
 
-# Keras ist so picky, dass es erfordert, dass die gleiche Anzahl von in und out samples
-# durch das System laufen
 
+# Keras ist sogar so picky, dass es erfordert, dass die gleiche Anzahl von in und out samples
+# durch das System laufen
 # Drei Outs, ein echtes, ein generiertes und ein zusammengefasstes Sample
 discriminator_model = Model(inputs=[real_samples,
                                     generator_input_for_discriminator],
@@ -189,14 +188,14 @@ dummy_y = np.zeros((BATCH_SIZE, 1), dtype=np.float32)
 
 # Trainingsfunktion
 for epoch in range(100):
-    np.random.shuffle(X_train)
+    np.random.shuffle(alleEvents)
     print("Epoch: ", epoch)
-    print("Number of batches: ", int(X_train.shape[0] // BATCH_SIZE))
+    print("Number of batches: ", int(alleEvents.shape[0] // BATCH_SIZE))
     discriminator_loss = []
     generator_loss = []
     minibatches_size = BATCH_SIZE * TRAINING_RATIO
-    for i in range(int(X_train.shape[0] // (BATCH_SIZE * TRAINING_RATIO))):
-        discriminator_minibatches = X_train[i * minibatches_size:
+    for i in range(int(alleEvents.shape[0] // (BATCH_SIZE * TRAINING_RATIO))):
+        discriminator_minibatches = alleEvents[i * minibatches_size:
                                             (i + 1) * minibatches_size]
         for j in range(TRAINING_RATIO):
             image_batch = discriminator_minibatches[j * BATCH_SIZE:

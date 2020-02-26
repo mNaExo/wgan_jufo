@@ -38,6 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RunManager" selected="Python.wganF">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -250,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582401128613</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Funktion zum Speichern als JSON...">
+      <created>1582648494582</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1582648494582</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,7 +288,8 @@
     <MESSAGE value="Doc geändert..." />
     <MESSAGE value="TODO und so" />
     <MESSAGE value="Bisschen hier, bisschen da. Angefangen mit der &#10;gen_events Methode, muss aber nochmal durchdacht werden" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bisschen hier, bisschen da. Angefangen mit der &#10;gen_events Methode, muss aber nochmal durchdacht werden" />
+    <MESSAGE value="Funktion zum Speichern als JSON..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Funktion zum Speichern als JSON..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="185" key="#Inspections" timestamp="1582400638251">
@@ -295,15 +304,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="640" y="258" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582328916484" />
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1582401125721">
+    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1582648493392">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="515" y="30" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1582186604278" />
-    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582401125721" />
-    <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1582414107149">
+    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582648493392" />
+    <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1582730818824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="282" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582414107149" />
+    <state x="740" y="282" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582730818824" />
     <state width="1899" height="351" key="GridCell.Tab.0.bottom" timestamp="1582401141799">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -336,16 +345,20 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1899" height="351" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582401141799" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1582401132984">
+    <state x="476" y="170" key="SettingsEditor" timestamp="1582731999542">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="476" y="170" key="SettingsEditor/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582731999542" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1582648496122">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="442" y="207" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1582186614913" />
-    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582401132984" />
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1582414079101">
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582648496122" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1582730213486">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="540" y="279" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582183181504" />
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582414079101" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582730213486" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1582400661824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
