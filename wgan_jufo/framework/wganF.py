@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 
-import xlrd
+import xlrd as x
 import os
 import numpy as np
 from keras.models import Model, Sequential
@@ -15,11 +15,26 @@ from keras.datasets import mnist
 from keras import backend as K
 from functools import partial
 
-import data.dataGetter as dG
-
 BATCH_SIZE = 64
 TRAINING_RATIO = 5
 GRADIENT_PENALTY_WEIGHT = 10
+DATA_FILE = "../data/augeralle.xlsx"
+
+
+def reCol(file, c):
+    '''
+    Methode zur Erfassung und Rückgabe der Ereignisdaten aus einer Exceltabelle
+    '''
+    wb = x.open_workbook(file)
+    s = wb.sheet_by_index(0)
+    col = np.asarray([s.cell(c, r).value for r in range(1, s.ncols)])
+    return col
+
+
+def reNRows(file, nS):
+    wb = x.open_workbook(file)
+    s = wb.sheet_by_index(nS)
+    return s.nrows
 
 
 def wasserstein_loss(y_true, y_pred):
@@ -117,14 +132,18 @@ args = parser.parse_args()
 
 # Daten in leere Liste laden
 
-
-d = dG.dataGetter(Path("../data/augeralle.xlsx"))
-alleEvents = []
-for i in range(1, dG.reNRows(dG.DATA_FILE, 0)):
-    alleEvents.append(dG.reCol(i))
-
-for i in range(1, dG.reNRows(dG.DATA_FILE, 0)):
-    alleEvents[i] = alleEvents[i].tf.Transform(BatchNormalization)
+einHalbEvents = []
+einHalbEvents2 = []
+for i in range(1, 3):
+    ROW_I = reCol(DATA_FILE, i)
+    print(ROW_I)
+    einHalbEvents.append(ROW_I)
+for i in range(1, 3):
+    ROW_I = reCol(DATA_FILE, i)
+    print(ROW_I)
+    einHalbEvents2.append(ROW_I)
+alleEvents = np.concatenate((einHalbEvents, einHalbEvents2), axis=0)
+alleEvents = (alleEvents.astype(np.float32)-141) /141
 
 # Initialisierung von Generator und Diskriminator
 generator = make_generator()

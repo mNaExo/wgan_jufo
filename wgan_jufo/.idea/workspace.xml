@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exec/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dataGetter.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataGetter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/wganF.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/wganF.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +39,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JuFo 2019.20\wgan_jufo-git\wgan_jufo\exec" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.wganF">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -268,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582735419923</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Ich muss los, Notfallzwischenspeicherung">
+      <created>1582741765903</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1582741765903</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,7 +309,8 @@
     <MESSAGE value="Bisschen hier, bisschen da. Angefangen mit der &#10;gen_events Methode, muss aber nochmal durchdacht werden" />
     <MESSAGE value="Funktion zum Speichern als JSON..." />
     <MESSAGE value="Das erste Mal keine offensichtlichen Errorsssss!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Das erste Mal keine offensichtlichen Errorsssss!" />
+    <MESSAGE value="Ich muss los, Notfallzwischenspeicherung" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ich muss los, Notfallzwischenspeicherung" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="185" key="#Inspections" timestamp="1582400638251">
@@ -315,31 +325,31 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="640" y="258" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582328916484" />
-    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1582735417347">
+    <state x="644" y="124" key="CommitChangelistDialog2" timestamp="1582741765023">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="515" y="30" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1582186604278" />
-    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582735417347" />
+    <state x="644" y="124" key="CommitChangelistDialog2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582741765023" />
     <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1582730818824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="282" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582730818824" />
-    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1582735454974">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom" timestamp="1582751110726">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582735454974" />
-    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1582735454974">
+    <state width="1899" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582751110726" />
+    <state width="1899" height="285" key="GridCell.Tab.0.center" timestamp="1582751110726">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582735454974" />
-    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1582735454974">
+    <state width="1899" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582751110726" />
+    <state width="1899" height="285" key="GridCell.Tab.0.left" timestamp="1582751110726">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582735454974" />
-    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1582735454974">
+    <state width="1899" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582751110726" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right" timestamp="1582751110726">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582735454974" />
+    <state width="1899" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582751110726" />
     <state width="1899" height="351" key="GridCell.Tab.1.bottom" timestamp="1582401141799">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -365,11 +375,11 @@
     </state>
     <state x="442" y="207" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1582186614913" />
     <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582735422913" />
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1582730213486">
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1582750048067">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="540" y="279" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582183181504" />
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582730213486" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582750048067" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1582400661824">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
