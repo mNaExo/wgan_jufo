@@ -1,4 +1,6 @@
 import argparse
+from pathlib import Path
+
 import xlrd
 import os
 import numpy as np
@@ -13,7 +15,7 @@ from keras.datasets import mnist
 from keras import backend as K
 from functools import partial
 
-import data.dataGetter
+import data.dataGetter as dG
 
 BATCH_SIZE = 64
 TRAINING_RATIO = 5
@@ -114,11 +116,14 @@ parser.add_argument("--output_dir", "-o", required=True,
 args = parser.parse_args()
 
 # Daten in leere Liste laden
-alleEvents = []
-for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
-    alleEvents.append(data.dataGetter.reCol(i))
 
-for i in range(1, data.dataGetter.reNRows(data.dataGetter.DATA_FILE, 0)):
+
+d = dG.dataGetter(Path("../data/augeralle.xlsx"))
+alleEvents = []
+for i in range(1, dG.reNRows(dG.DATA_FILE, 0)):
+    alleEvents.append(dG.reCol(i))
+
+for i in range(1, dG.reNRows(dG.DATA_FILE, 0)):
     alleEvents[i] = alleEvents[i].tf.Transform(BatchNormalization)
 
 # Initialisierung von Generator und Diskriminator
@@ -165,7 +170,6 @@ partial_gp_loss = partial(gradient_penalty_loss,
 
 partial_gp_loss.__name__ = 'gradient_penalty'
 
-
 # Keras ist sogar so picky, dass es erfordert, dass die gleiche Anzahl von in und out samples
 # durch das System laufen
 # Drei Outs, ein echtes, ein generiertes und ein zusammengefasstes Sample
@@ -196,7 +200,7 @@ for epoch in range(100):
     minibatches_size = BATCH_SIZE * TRAINING_RATIO
     for i in range(int(alleEvents.shape[0] // (BATCH_SIZE * TRAINING_RATIO))):
         discriminator_minibatches = alleEvents[i * minibatches_size:
-                                            (i + 1) * minibatches_size]
+                                               (i + 1) * minibatches_size]
         for j in range(TRAINING_RATIO):
             image_batch = discriminator_minibatches[j * BATCH_SIZE:
                                                     (j + 1) * BATCH_SIZE]
