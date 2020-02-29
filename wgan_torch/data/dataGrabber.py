@@ -1,33 +1,24 @@
-'''
-Lädt die Ereignisdaten aus der Exceltabelle
-'''
-
-import xlrd as x
 import numpy as np
+import sqlite3
+
 
 class dataGrabber():
     '''
-    Her mit den Daten, sonst komme ich mit der Peitsche!
+        Greift auf beliebige Datenbanken und Tabellen innerhalb dieser zu
     '''
+    def __init__(self, DB_FILE):
+        '''
+            Initialisierung der Verbindung
+        '''
+        self.conn = sqlite3.connect(DB_FILE)
+        self.c = self.conn.cursor()
 
-    def __init__(self, file):
-        self.DATA_FILE = file
-        print("Lets get this Dataparty started on the dancefloor. Datei, aus der gezogen wird: " + file)
 
-    # Variable für Datenquelle initialisieren
-    def reCol(self, c):
+    def grabRow(self, TABLE_NAME, ROW_NUMBER):
         '''
-        Methode zur Erfassung und Rückgabe der Ereignisdaten aus einer Exceltabelle
+            Gibt eine Reihe aus einer beliebigen Tabelle als NumPy Float-Array zurück
         '''
-        wb = x.open_workbook(self.DATA_FILE)
-        s = wb.sheet_by_index(0)
-        col = np.asarray([s.cell(c, r).value for r in range(1, s.ncols)])
-        return col
-
-    def reNRows(self, nS):
-        '''
-        Methode zur Rückgabe der Anzahl an Reihen innerhalb der Tabelle
-        '''
-        wb = x.open_workbook(self.DATA_FILE)
-        s = wb.sheet_by_index(nS)
-        return s.nrows
+        ROW_ARRAY = np.array([], dtype='f')
+        self.c.execute("SELECT * FROM {} WHERE EventID={}".format(TABLE_NAME, ROW_NUMBER))
+        ROW_ARRAY = self.c.fetchone()
+        print(ROW_ARRAY)
