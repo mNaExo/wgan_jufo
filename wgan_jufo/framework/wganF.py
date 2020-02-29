@@ -115,8 +115,6 @@ def generate_events(generator_model, output_dir, epoch):
     test_event_tensor = np.squeeze(np.round(test_event_tensor).astype(np.uint8))
     # tiled_event_output =
 
-    # TODO: Methode für Ausgabengenerierung muss fertig werden!!!!!
-
     # test_tensor = generator_model.predict(np.random.rand(10, 100))
     # test_tensor = np.squeeze(np.round(test_tensor).astype(np.uint8))
     # tiled_output = test_tensor(test_tensor)
@@ -132,13 +130,16 @@ args = parser.parse_args()
 
 # Daten in leere Liste laden
 
+# OUTPUT_FILE = open('out.txt', 'w')
 einHalbEvents = []
 einHalbEvents2 = []
-for i in range(1, 3):
+for i in range(1, int((reNRows(DATA_FILE, 0))/2)):
     ROW_I = reCol(DATA_FILE, i)
+    # OUTPUT_FILE.write(ROW_I + "\n")
     print(ROW_I)
+
     einHalbEvents.append(ROW_I)
-for i in range(1, 3):
+for i in range(int((reNRows(DATA_FILE, 0)/2)), reNRows(DATA_FILE, 0)):
     ROW_I = reCol(DATA_FILE, i)
     print(ROW_I)
     einHalbEvents2.append(ROW_I)
@@ -230,8 +231,6 @@ for epoch in range(100):
         generator_loss.append(generator_model.train_on_batch(np.random.rand(BATCH_SIZE,
                                                                             100),
                                                              positive_y))
-
-    # TODO: AUSGABE!!!!! Visualisierung der Daten!
     generate_events(generator, args.output_dir, epoch)
 
 
@@ -250,7 +249,7 @@ re_wgan.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy
 model_json = re_wgan().to_json()
 with open("model.json", "w") as json_file:
     json_file.write(model_json)
-# serialize weights to HDF5
+# Synapsengewichte übergeben
 re_wgan.save_weights("model.h5")
 print("Saved model to disk")
 
