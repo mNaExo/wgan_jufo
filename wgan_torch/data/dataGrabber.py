@@ -48,3 +48,4 @@ class dataGrabber():
         '''
         self.c.execute("PRAGMA table_info(%s)" % TABLE_NAME)
         NUMBER_OF_COLUMNS = len(self.c.fetchall())
+        return NUMBER_OF_COLUMNS
