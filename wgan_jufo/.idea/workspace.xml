@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/output-aber-fancy.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/framework/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/augeralle.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/augeralle.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exec/trainWGAN.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/wganF.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/wganF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wgan_torch/models/wganGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../wgan_torch/models/wganGenerator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
