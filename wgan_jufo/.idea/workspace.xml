@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="770de2cf-d930-41e8-90ef-052379ea8ee9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../wgan_torch/models/wganGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../wgan_torch/models/wganGenerator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,11 +386,11 @@
     </state>
     <state x="442" y="207" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1582186614913" />
     <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582751724694" />
-    <state x="540" y="279" key="com.intellij.ide.util.TipDialog" timestamp="1582893654940">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog" timestamp="1583512068571">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="540" y="279" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582893654940" />
-    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1582830381289" />
+    <state x="675" y="351" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1536.834@0.0.1920.1050" timestamp="1583512068571" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1582832383938">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

@@ -29,9 +29,6 @@ ITERS = 200000
 OUTPUT_DIM = 6
 
 
-
-# ==================== Hier gehts mit den Netzen los ====================
-
 class wganModel():
     '''
         Hier kommt noch was Schlaues hin...
